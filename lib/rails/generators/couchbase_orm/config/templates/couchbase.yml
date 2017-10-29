@@ -1,6 +1,7 @@
 common: &common
   hosts: localhost
-  password:
+  username: admin
+  password: password
 
 development:
   <<: *common
@@ -9,7 +10,6 @@ development:
 test:
   <<: *common
   bucket: <%= database_name || app_name %>_test
-  password: for_test_bucket
 
 # set these environment variables on your production server
 production:
