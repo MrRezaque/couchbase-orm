@@ -10,6 +10,7 @@ rvm:
 branches:
   only:
     - master
+    - dev
 before_install:
   - git submodule update --init --recursive
   - gem install ffi
